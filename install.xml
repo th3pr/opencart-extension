@@ -1,0 +1,48 @@
+<modification>
+    <name>Disable Copy Extension</name>
+    <version>1.7</version>
+    <code>disable_copy_extension</code>
+    <author>Brmja.Tech</author>
+    <link>https://brmja.tech</link>
+    <file path="admin/controller/extension/module/disable_copy.php">
+        <operation>
+            <search><![CDATA[$this->response->setOutput($this->load->view('extension/module/disable_copy', $data));]]></search>
+            <add position="after"><![CDATA[
+            $this->document->addScript('catalog/view/javascript/disable_copy.js');
+            ]]></add>
+        </operation>
+    </file>
+    <file path="admin/language/en-gb/extension/module/disable_copy.php">
+        <operation>
+            <search><![CDATA[$_['text_extension']   = 'Extensions';]]></search>
+            <add position="after"><![CDATA[
+            $_['text_success']     = 'Success: You have modified module Disable Copy!';
+            $_['text_edit']        = 'Edit Disable Copy Module';
+            $_['entry_status']     = 'Status';
+            $_['error_permission'] = 'Warning: You do not have permission to modify module Disable Copy!';
+            ]]></add>
+        </operation>
+    </file>
+    <file path="admin/language/en-us/extension/module/disable_copy.php">
+        <operation>
+            <search><![CDATA[$_['text_extension']   = 'Extensions';]]></search>
+            <add position="after"><![CDATA[
+            $_['text_success']     = 'Success: You have modified module Disable Copy!';
+            $_['text_edit']        = 'Edit Disable Copy Module';
+            $_['entry_status']     = 'Status';
+            $_['error_permission'] = 'Warning: You do not have permission to modify module Disable Copy!';
+            ]]></add>
+        </operation>
+    </file>
+    <file path="admin/language/en/extension/module/disable_copy.php">
+        <operation>
+            <search><![CDATA[$_['text_extension']   = 'Extensions';]]></search>
+            <add position="after"><![CDATA[
+            $_['text_success']     = 'Success: You have modified module Disable Copy!';
+            $_['text_edit']        = 'Edit Disable Copy Module';
+            $_['entry_status']     = 'Status';
+            $_['error_permission'] = 'Warning: You do not have permission to modify module Disable Copy!';
+            ]]></add>
+        </operation>
+    </file>
+</modification>
